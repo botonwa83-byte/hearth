@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hearth 隐私政策</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 44rem; margin: 0 auto; padding: 2rem 1.25rem 4rem;
+         font: 16px/1.75 -apple-system, BlinkMacSystemFont, "PingFang SC", system-ui, sans-serif; }
+  h1 { font-size: 1.6rem; margin: 0 0 .25rem; }
+  h2 { font-size: 1.15rem; margin: 2.25rem 0 .5rem; }
+  .updated { color: #888; font-size: .9rem; margin-top: 0; }
+  .note { background: rgba(127,127,127,.12); border-radius: .5rem; padding: .75rem 1rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin: .3rem 0; }
+  a { color: #0a84ff; }
+</style>
+</head>
+<body>
+
+<h1>Hearth 隐私政策</h1>
+<p class="updated">最后更新：2026-10-14</p>
+
+<p class="note"><strong>一句话说明：</strong>Hearth 没有账号系统，也没有开发者服务器。你的录音、转写文本、健康数据与写成的文字，全部只保存在你自己的设备上。</p>
+
+<h2>1. 我们不收集什么</h2>
+<p>开发者不收集、不上传、不出售你的任何数据。具体包括：</p>
+<ul>
+  <li>不要求注册、登录，不收集姓名、邮箱、电话等身份信息。</li>
+  <li>不使用任何第三方广告、统计或行为追踪 SDK。</li>
+  <li>没有开发者服务器的概念——数据不出设备，也就无从收集。</li>
+</ul>
+
+<h2>2. 数据保存在哪里</h2>
+<p>以下内容保存在你设备本地的 App 沙盒内：</p>
+<ul>
+  <li>录音音频文件与转写文本；</li>
+  <li>由录音整理出的日记、说做对照结果、表达产出物；</li>
+  <li>你确认过的记忆事实；</li>
+  <li>健康数据的中性标签快照（例如「静息心率高于个人基线 1.8 个标准差」）。</li>
+</ul>
+<p>删除 App 即删除以上全部本地数据，开发者无法为你恢复。</p>
+
+<h2>3. 我们请求的系统权限，以及为什么</h2>
+<ul>
+  <li><strong>麦克风</strong>：录制生活记录——这是 App 的核心功能。录音时手表会显示系统要求的橙色指示点，我们无法隐藏它，也不会隐藏。</li>
+  <li><strong>语音识别</strong>：在你的设备本地把录音转成文字。转写在本机完成，不发送音频到任何服务器。</li>
+  <li><strong>健康数据（只读）</strong>：读取心率、心率变异性、睡眠、步数、呼吸频率等，用于把它们作为背景叠加到当天时间线上。Hearth <strong>从不写入或修改</strong>你的健康数据。</li>
+  <li><strong>位置（默认关闭）</strong>：仅在你有需要时用于在时间线上标注大致地点。默认关闭，且只保存停留点，不保存移动轨迹。</li>
+</ul>
+<p>以上权限均可随时在系统「设置」中关闭；关闭后对应功能不可用，但 App 其余部分不受影响。</p>
+
+<h2>4. AI 功能与第三方服务</h2>
+<p>Hearth 的 AI 功能采用「自带密钥」（BYOK）方式：由你自己在设置中填入第三方 AI 服务商（如 DeepSeek）的 API 密钥，费用由你与服务商直接结算，开发者不经手、不接触你的密钥与费用。</p>
+<p>当你主动使用 AI 功能时，App 会把你选择的那部分内容发送给<strong>你自己配置的服务商</strong>。发送的内容经过白名单约束，具体为：</p>
+<ul>
+  <li>录音的转写文本片段；</li>
+  <li>中性的身体状态标签（例如「静息心率高于个人基线 1.8 个标准差」）；</li>
+  <li>大致地名（<strong>仅在你明确授权后</strong>）；</li>
+  <li>时间段。</li>
+</ul>
+<p class="note"><strong>以下内容永不外发：</strong>原始音频文件、健康数据的原始数值（如具体心率读数）、精确经纬度坐标。这一约束在代码层面以类型系统强制执行，并有单元测试守护。</p>
+<p>第三方服务商如何处理你发送的内容，适用其各自的隐私政策，请自行查阅。若你不希望任何内容离开设备，不使用 AI 功能即可——录音、转写、检索、时间线均完全离线。</p>
+
+<h2>5. 关于健康数据的重要说明</h2>
+<p>Hearth 展示的健康相关信息是<strong>关于你自己的统计描述</strong>（例如「高于个人基线 1.8 个标准差」），不是医学诊断，也不能作为任何医疗决策的依据。</p>
+<p>Hearth <strong>不会</strong>替你判断情绪、压力或健康状况，也不会给出医疗建议。身体读数受运动、饮食、环境等众多因素影响，任何结论都应由你自己或专业医生作出。</p>
+
+<h2>6. 你的控制权</h2>
+<ul>
+  <li>随时可以在 App 内删除任意录音、日记或记忆事实。</li>
+  <li>随时可以关闭健康数据读取、位置标注或 AI 功能。</li>
+  <li>随时可以删除整个 App，清除全部本地数据。</li>
+</ul>
+
+<h2>7. 儿童</h2>
+<p>Hearth 不面向儿童设计，也不会刻意为儿童收集任何信息。由于本 App 不收集任何数据，因此不存在针对儿童的数据处理行为。</p>
+
+<h2>8. 政策变更</h2>
+<p>若本政策发生实质性变更，我们会在本页面更新「最后更新」日期。继续使用即表示接受更新后的政策。</p>
+
+<h2>9. 联系我们</h2>
+<p>任何隐私相关疑问，请发邮件至 <a href="mailto:botonwa83@gmail.com">botonwa83@gmail.com</a>，或访问<a href="./support.html">技术支持页面</a>。</p>
+
+</body>
+</html>
